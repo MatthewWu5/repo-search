@@ -11,7 +11,7 @@ export default {
     }
   },
   mounted() {
-    getRepos('react').then(res => {
+    getRepos('matthewwu5/repo-search').then(res => {
       console.log(res)
     })
   },
