@@ -7,6 +7,13 @@
     <div class="container multiline" :title="text">
       {{ text }}
     </div>
+
+    <div class="container scroll" :title="text">
+      {{ text }}
+    </div>
+    <div class="container scrollX" :title="text">
+      {{ text }}
+    </div>
   </div>
 </template>
 <script>
@@ -32,5 +39,13 @@ export default {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+.scroll {
+  height: 100px;
+  overflow: auto;
+}
+.scrollX {
+  white-space: nowrap;
+  overflow: auto;
 }
 </style>
