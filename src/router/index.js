@@ -38,6 +38,14 @@ const routes = [
         path: '/learning/transform',
         component: () => import('../learning-demo/transform.vue'),
       },
+      {
+        path: '/learning/center-layout',
+        component: () => import('../learning-demo/center-layout.vue'),
+      },
+      {
+        path: '/learning/text-overflow',
+        component: () => import('../learning-demo/text-overflow.vue'),
+      },
     ],
   },
 ]
