@@ -1,5 +1,11 @@
 <template>
   <div class="wrapper">
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media"
+      >query media</a
+    >
+    <br />
+    <br />
+
     float: left
     <div class="container">
       <div class="item float">1</div>
@@ -18,9 +24,13 @@
       <div class="item float-right"></div>
       这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字
     </div>
+
     add container width:
     <input type="text" v-model="containerWidth" />
-    <div class="container" :style="{ width: containerWidth }">
+    <div
+      class="container responsive-container"
+      :style="{ width: containerWidth }"
+    >
       <div class="item float responsive">1</div>
       <div class="item float responsive">2</div>
       <div class="item float responsive">3</div>
@@ -103,6 +113,12 @@ export default {
   }
   .responsive {
     width: 30%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .responsive-container {
+    width: 500px !important;
   }
 }
 </style>
