@@ -46,6 +46,22 @@ const routes = [
         path: '/learning/text-overflow',
         component: () => import('../learning-demo/text-overflow.vue'),
       },
+      {
+        path: '/learning/display-base',
+        component: () => import('../learning-demo/display-base.vue'),
+      },
+      {
+        path: '/learning/display-table',
+        component: () => import('../learning-demo/display-table.vue'),
+      },
+      {
+        path: '/learning/display-flex',
+        component: () => import('../learning-demo/display-flex.vue'),
+      },
+      {
+        path: '/learning/float',
+        component: () => import('../learning-demo/float.vue'),
+      },
     ],
   },
 ]
