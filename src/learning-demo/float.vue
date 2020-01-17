@@ -5,7 +5,6 @@
     >
     <br />
     <br />
-
     float: left
     <div class="container">
       <div class="item float">1</div>
@@ -14,18 +13,21 @@
       <div class="item float">4</div>
       <div class="item float">5</div>
     </div>
+    <br />
     float: right
     <div class="container">
       <div class="item float-right">1</div>
       <div class="item float-right">2</div>
       <div class="item float-right">3</div>
     </div>
+    <br />
+    文字折行
     <div class="container">
       <div class="item float-right"></div>
       这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字这里有很多文字
     </div>
-
-    add container width:
+    <br />
+    设置百分比宽度 实现responsive, width:
     <input type="text" v-model="containerWidth" />
     <div
       class="container responsive-container"
@@ -37,13 +39,29 @@
       <div class="item float responsive">4</div>
       <div class="item float responsive">5</div>
     </div>
+    <br />
     BFC: block formatting context
+
+    <br />
+    高度塌陷 默认不会计算浮动元素的高度 而BFC规则会计算在内
+    <!-- <div class="bfc"> -->
     <div>
       <div class="item float">1</div>
       <div class="item float">2</div>
       <div class="item float">3</div>
       <div class="item float">4</div>
     </div>
+    <br />
+    边距重叠 同一个BFC作用域下的元素会边距重叠 作用大的边距
+    <!-- <div> -->
+    <div class="item" style="margin-bottom:20px"></div>
+    <!-- </div> -->
+    <!-- <div class="bfc"> -->
+    <div class="item" style="margin-top: 30px;"></div>
+    <!-- </div> -->
+
+    <br />
+    <div>扩展</div>
     float with inline item
     <div class="container inline-block">
       <div class="item">item</div>
@@ -114,11 +132,22 @@ export default {
   .responsive {
     width: 30%;
   }
+  .bfc {
+    overflow: hidden;
+  }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   .responsive-container {
-    width: 500px !important;
+    width: 600px !important;
+    border: 2px solid greenyellow;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .responsive-container {
+    width: 1200px !important;
+    border: 2px solid greenyellow;
   }
 }
 </style>

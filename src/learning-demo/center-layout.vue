@@ -1,5 +1,6 @@
 <template>
   <div>
+    flex, margin, relative-absolute
     <div class="container flex">
       <div class="item"></div>
     </div>

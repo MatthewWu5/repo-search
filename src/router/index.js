@@ -64,6 +64,10 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/learning/homework',
+    component: () => import('../learning-demo/homework.vue'),
+  },
 ]
 
 const router = new VueRouter({
